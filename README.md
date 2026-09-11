@@ -11,7 +11,6 @@
             --text-color: #2D311A;
             --accent-color: #5C6926;
             --header-bg: #798835;
-            --white: #FFFFFF;
         }
 
         * {
@@ -56,7 +55,6 @@
             font-size: 0.95rem;
         }
 
-        /* Styling Accordion / Klik Judul */
         .accordion-item {
             background-color: var(--card-bg);
             border-radius: 10px;
@@ -105,7 +103,7 @@
 
         .accordion-item.active .accordion-content {
             padding: 20px 25px;
-            max-height: 2000px; /* Cukup besar agar seluruh materi muat saat terbuka */
+            max-height: 3000px;
         }
 
         h3 {
@@ -126,13 +124,23 @@
         .img-container {
             text-align: center;
             margin: 20px 0;
+            background: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
         }
 
         .img-container img {
             max-width: 100%;
             height: auto;
-            border-radius: 8px;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+            border-radius: 6px;
+        }
+
+        .img-caption {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 5px;
+            font-style: italic;
         }
 
         .grid-2 {
@@ -163,80 +171,86 @@
 
 <div class="container">
 
-    <!-- Header Judul Utama -->
     <div class="header-card">
         <h1>Sistem Saraf</h1>
         <div class="author-box">
             <p><strong>Kelompok 5:</strong> Mia Nurhalimah (242154111055) | Khalisa Latifah (242154111057) | Lina Agustin (242154111059)</p>
         </div>
-        <p style="margin-top: 10px; font-size: 0.9rem; color: #555;"><i>Klik pada salah satu judul materi di bawah untuk membuka penjelasan dan gambar.</i></p>
+        <p style="margin-top: 10px; font-size: 0.9rem; color: #555;"><i>Klik pada salah satu judul materi untuk menampilkan penjelasannya beserta gambar.</i></p>
     </div>
 
-    <!-- Materi 1 -->
+    <!-- 1. Sel Saraf (Neuron) -->
     <div class="accordion-item">
         <div class="accordion-header">1. Sel Saraf (Neuron) & Anatomi</div>
         <div class="accordion-content">
             <p>Neuron adalah sel utama dalam sistem saraf yang berfungsi sebagai unit fungsional dasar untuk menerima, memproses, dan menghantarkan informasi dalam bentuk impuls listrik dan sinyal kimia.</p>
             
             <div class="img-container">
-                <img src="neuron.png" alt="Anatomi Neuron" onerror="this.src='https://via.placeholder.com/600x300?text=Gambar+Anatomi+Neuron'">
+                <img src="neuron.png" alt="Anatomi Neuron">
+                <div class="img-caption">Gambar 1: Struktur Anatomi Sel Saraf (Neuron)</div>
             </div>
 
             <h3>Struktur Anatomi Neuron:</h3>
             <ul>
                 <li><strong>Badan sel (soma):</strong> Pusat metabolik neuron, tidak memiliki sentriol.</li>
-                <li><strong>Dendrit:</strong> Menerima sinyal/rangsangan dari neuron lain menuju badan sel & menentukan kekuatan sinyal.</li>
-                <li><strong>Akson:</strong> Serabut panjang yang mengirimkan impuls saraf dari badan sel menuju neuron/otot target.</li>
-                <li><strong>Selubung Mielin:</strong> Selaput lemak berbentuk lilin untuk memastikan sinyal listrik berjalan sesuai jalur.</li>
+                <li><strong>Dendrit:</strong> Menerima sinyal/rangsangan dari neuron lain menuju badan sel.</li>
+                <li><strong>Akson:</strong> Serabut panjang yang mengirimkan impuls saraf dari badan sel menuju sel target.</li>
+                <li><strong>Selubung Mielin:</strong> Selaput lemak pembungkus akson untuk mempercepat hantaran impuls.</li>
             </ul>
-            <a href="https://skfb.ly/oPDwP" target="_blank" class="link-3d">🌐 Buka Anatomi Neuron (3D Interactive)</a>
+            <a href="https://skfb.ly/oPDwP" target="_blank" class="link-3d">🌐 Buka Model 3D Anatomi Neuron</a>
         </div>
     </div>
 
-    <!-- Materi 2 -->
+    <!-- 2. Klasifikasi Neuron -->
     <div class="accordion-item">
         <div class="accordion-header">2. Klasifikasi Neuron</div>
         <div class="accordion-content">
-            <p>Berdasarkan fungsinya, neuron diklasifikasikan menjadi:</p>
+            <p>Berdasarkan fungsinya, neuron diklasifikasikan menjadi tiga jenis utama:</p>
+            
+            <div class="img-container">
+                <img src="jenis-neuron.png" alt="Klasifikasi Neuron">
+                <div class="img-caption">Gambar 2: Jenis-Jenis Neuron Berdasarkan Fungsi & Struktur</div>
+            </div>
+
             <ul>
                 <li><strong>Neuron Sensorik:</strong> Membawa informasi dari reseptor indra menuju sistem saraf pusat.</li>
                 <li><strong>Neuron Motorik:</strong> Mengirimkan perintah dari sistem saraf pusat menuju otot atau kelenjar.</li>
-                <li><strong>Interneuron:</strong> Penghubung antara neuron sensorik dan motorik di dalam sistem saraf pusat untuk mengintegrasikan informasi (berpikir, belajar, dan keputusan).</li>
+                <li><strong>Interneuron:</strong> Penghubung neuron sensorik dan motorik di sistem saraf pusat untuk mengintegrasikan informasi.</li>
             </ul>
-            <div class="img-container">
-                <img src="jenis-neuron.png" alt="Klasifikasi Neuron" onerror="this.style.display='none'">
-            </div>
         </div>
     </div>
 
-    <!-- Materi 3 -->
+    <!-- 3. Potensial Membran & Aksi -->
     <div class="accordion-item">
         <div class="accordion-header">3. Fisiologi Potensial Membran & Aksi</div>
         <div class="accordion-content">
             <div class="img-container">
-                <img src="potensial.png" alt="Grafik Potensial Aksi" onerror="this.src='https://via.placeholder.com/600x300?text=Grafik+Potensial+Membran'">
+                <img src="potensial.png" alt="Grafik Potensial Aksi">
+                <div class="img-caption">Gambar 3: Grafik Tahapan Potensial Aksi dan Membran Istirahat</div>
             </div>
+
             <h3>Potensial Istirahat (-70 mV)</h3>
-            <p>Bagian dalam neuron bermuatan lebih negatif dibanding luar. Dipertahankan oleh kerja pompa Na⁺/K⁺ dengan energi ATP.</p>
+            <p>Bagian dalam neuron bermuatan lebih negatif dibanding luar. Dipertahankan oleh pompa Na⁺/K⁺ dengan ATP.</p>
             
             <h3>Tahapan Potensial Aksi:</h3>
             <ul>
-                <li><strong>Depolarisasi:</strong> Kanal Na⁺ terbuka, ion Na⁺ masuk, muatan sel jadi positif & memicu impuls.</li>
+                <li><strong>Depolarisasi:</strong> Kanal Na⁺ terbuka, ion Na⁺ masuk, muatan sel menjadi positif.</li>
                 <li><strong>Repolarisasi:</strong> Kanal Na⁺ tutup & kanal K⁺ terbuka, ion K⁺ keluar, muatan kembali negatif.</li>
-                <li><strong>Hiperpolarisasi:</strong> Penurunan muatan sesaat melebihi batas istirahat sebelum stabil.</li>
+                <li><strong>Hiperpolarisasi:</strong> Penurunan muatan sesaat melebihi batas istirahat.</li>
                 <li><strong>Konduksi Saltatori:</strong> Impuls "melompat" antar Nodus Ranvier mempercepat transmisi sinyal.</li>
             </ul>
         </div>
     </div>
 
-    <!-- Materi 4 -->
+    <!-- 4. Sinapsis Kimia & Neurotransmitter -->
     <div class="accordion-item">
         <div class="accordion-header">4. Transmisi Sinapsis Kimia & Neurotransmitter</div>
         <div class="accordion-content">
             <p>Sinapsis adalah titik pertemuan fungsional antar neuron yang dipisahkan oleh celah sinaptik (synaptic cleft).</p>
             
             <div class="img-container">
-                <img src="sinapsis.png" alt="Mekanisme Sinapsis" onerror="this.src='https://via.placeholder.com/600x300?text=Mekanisme+Transmisi+Sinapsis'">
+                <img src="sinapsis.png" alt="Mekanisme Sinapsis">
+                <div class="img-caption">Gambar 4: Mekanisme Pelepasan Neurotransmitter pada Celah Sinaptik</div>
             </div>
 
             <h3>Mekanisme Kerja Sinapsis:</h3>
@@ -245,20 +259,18 @@
                 <li>Ion Ca²⁺ memicu pelepasan Neurotransmitter ke celah sinaptik secara eksositosis.</li>
                 <li>Neurotransmitter berikatan dengan reseptor di membran postsinaptik.</li>
             </ol>
-            
-            <h3>Peran Neurotransmitter:</h3>
-            <p>Zat kimia pembawa pesan (seperti Asetilkolin, Dopamin, Serotonin). Setelah bekerja, neurotransmitter diuraikan enzim atau diserap kembali (reuptake) agar tidak terjadi stimulasi berlebihan.</p>
         </div>
     </div>
 
-    <!-- Materi 5 -->
+    <!-- 5. Serebrum & Lobus Otak -->
     <div class="accordion-item">
         <div class="accordion-header">5. Otak Besar (Serebrum) & Lobus</div>
         <div class="accordion-content">
-            <p>Porsi terbesar otak (2/3 berat total), terbagi menjadi 2 hemisfer (kanan & kiri) yang bersifat kontralateral. Memiliki lipatan Gyrus (tonjolan) dan Sulcus (celah).</p>
+            <p>Porsi terbesar otak (2/3 berat total), terbagi menjadi 2 hemisfer (kanan & kiri) yang bersifat kontralateral.</p>
             
             <div class="img-container">
-                <img src="otak.png" alt="Lobus Otak" onerror="this.src='https://via.placeholder.com/600x300?text=Lobus-Lobus+Korteks+Serebral'">
+                <img src="otak.png" alt="Lobus Otak">
+                <div class="img-caption">Gambar 5: Pembagian Lobus Korteks Serebral</div>
             </div>
 
             <h3>Pembagian Lobus Korteks Serebral:</h3>
@@ -271,87 +283,78 @@
         </div>
     </div>
 
-    <!-- Materi 6 -->
+    <!-- 6. Batang Otak & Diensefalon -->
     <div class="accordion-item">
         <div class="accordion-header">6. Otak Kecil, Batang Otak & Diensefalon</div>
         <div class="accordion-content">
+            <div class="img-container">
+                <img src="batang-otak.png" alt="Batang Otak">
+                <div class="img-caption">Gambar 6: Bagian-Bagian Batang Otak dan Diensefalon</div>
+            </div>
+
             <h3>Otak Kecil (Serebelum)</h3>
-            <p>Menyelaraskan & mengkoordinasikan gerakan tubuh (terbagi atas Lobus Anterior, Posterior, & Flocculonodularis).</p>
+            <p>Menyelaraskan & mengkoordinasikan gerakan tubuh (Lobus Anterior, Posterior, & Flocculonodularis).</p>
             
             <h3>Batang Otak (Brainstem)</h3>
             <ul>
                 <li><strong>Mesensefalon:</strong> Refleks penglihatan & pendengaran.</li>
-                <li><strong>Pons:</strong> Jembatan saraf & pengatur irama pernapasan.</li>
+                <li><strong>Pons:</strong> Pengatur irama pernapasan.</li>
                 <li><strong>Medulla Oblongata:</strong> Pusat refleks otonom vital (denyut jantung, pernapasan, batuk).</li>
             </ul>
-
-            <h3>Diensefalon (Otak Antara)</h3>
-            <div class="grid-2">
-                <div style="background:#fff; padding:10px; border-radius:6px;"><strong>Talamus:</strong> Stasiun pemancar sinyal sensorik.</div>
-                <div style="background:#fff; padding:10px; border-radius:6px;"><strong>Hipotalamus:</strong> Pusat homeostasis & suhu.</div>
-                <div style="background:#fff; padding:10px; border-radius:6px;"><strong>Epitalamus:</strong> Kelenjar pineal (melatonin).</div>
-                <div style="background:#fff; padding:10px; border-radius:6px;"><strong>Subtalamus:</strong> Pemulusan gerakan motorik.</div>
-            </div>
         </div>
     </div>
 
-    <!-- Materi 7 -->
+    <!-- 7. Sumsum Tulang Belakang & Refleks -->
     <div class="accordion-item">
         <div class="accordion-header">7. Sumsum Tulang Belakang & Lengkung Refleks</div>
         <div class="accordion-content">
-            <p>Lanjutan medulla oblongata yang dilindungi meninges & cairan serebrospinal. Berfungsi sebagai jalur Asenden (sensorik ke otak) dan Desenden (motorik ke otot).</p>
+            <div class="img-container">
+                <img src="sumsum.png" alt="Penampang Sumsum Tulang Belakang">
+                <div class="img-caption">Gambar 7: Penampang Melintang Sumsum Tulang Belakang</div>
+            </div>
+
+            <div class="img-container">
+                <img src="refleks.png" alt="Jalur Lengkung Refleks">
+                <div class="img-caption">Gambar 8: Jalur Lengkung Refleks Spinal dan Kranial</div>
+            </div>
 
             <h3>Jalur Lengkung Refleks:</h3>
-            <ul>
-                <li><strong>Refleks Spinal:</strong> Diproses langsung di Medula Spinalis. <br><i>Alur: Reseptor → Neuron Sensorik → Sumsum Tulang Belakang → Neuron Motorik → Efektor.</i></li>
-                <li><strong>Refleks Kranial:</strong> Diproses di Batang Otak (12 pasang saraf kranial), contoh: refleks pupil mata menyempit saat terkena cahaya terang.</li>
-            </ul>
+            <p><i>Alur: Reseptor → Neuron Sensorik → Sumsum Tulang Belakang / Batang Otak → Neuron Motorik → Efektor.</i></p>
         </div>
     </div>
 
-    <!-- Materi 8 -->
+    <!-- 8. Simpatis & Parasimpatis -->
     <div class="accordion-item">
         <div class="accordion-header">8. Perbedaan Sistem Saraf Simpatis & Parasimpatis</div>
         <div class="accordion-content">
+            <div class="img-container">
+                <img src="otonom.png" alt="Saraf Simpatis dan Parasimpatis">
+                <div class="img-caption">Gambar 9: Perbandingan Respon Organ Saraf Simpatis vs Parasimpatis</div>
+            </div>
+
             <h3>1. Simpatis (Fight or Flight)</h3>
-            <p>Bekerja saat stres/darurat: Pupil membesar, denyut jantung & pernapasan meningkat, kerja pencernaan melambat.</p>
+            <p>Bekerja saat stres/darurat: Pupil membesar, denyut jantung meningkat, kerja pencernaan melambat.</p>
             
             <h3>2. Parasimpatis (Rest and Digest)</h3>
-            <p>Bekerja saat tenang/istirahat: Denyut jantung & nafas melambat, mengaktifkan kembali fungsi saluran pencernaan.</p>
-        </div>
-    </div>
-
-    <!-- Materi 9 -->
-    <div class="accordion-item">
-        <div class="accordion-header">9. Kelainan & Penyakit Sistem Saraf</div>
-        <div class="accordion-content">
-            <ul>
-                <li><strong>Stroke:</strong> Gangguan pasokan darah ke otak akibat penyumbatan (Iskemik) atau pecah pembuluh darah (Hemoragik).</li>
-                <li><strong>Multiple Sclerosis (MS):</strong> Penyakit autoimun yang merusak selubung mielin.</li>
-                <li><strong>Bell's Palsy:</strong> Kelumpuhan mendadak otot satu sisi wajah akibat peradangan Nervus VII.</li>
-                <li><strong>Penyakit Parkinson:</strong> Degenerasi sel saraf penghasil dopamin yang memicu tremor dan kekakuan gerak.</li>
-            </ul>
+            <p>Bekerja saat tenang/istirahat: Denyut jantung & nafas melambat, mengaktifkan kembali pencernaan.</p>
         </div>
     </div>
 
 </div>
 
 <script>
-    // Fitur Klik Accordion (Buka / Tutup Judul)
     const accordionHeaders = document.querySelectorAll('.accordion-header');
 
     accordionHeaders.forEach(header => {
         header.addEventListener('click', () => {
             const accordionItem = header.parentElement;
             
-            // Tutup item lain jika ingin hanya 1 materi yang terbuka (opsional)
             document.querySelectorAll('.accordion-item').forEach(item => {
                 if (item !== accordionItem) {
                     item.classList.remove('active');
                 }
             });
 
-            // Toggle item yang diklik
             accordionItem.classList.toggle('active');
         });
     });
